@@ -84,7 +84,7 @@ class IdleMessage(QtWidgets.QFrame):
         super().__init__()
         self.setObjectName('IdleMessage')
 
-        self._message_label = _('touch the button')
+        self._message_label = _('pierce\'s photobooth')
         self._message_button = _('LET\'S TAKE PICTURES')
 
         self.initFrame(trigger_action)
@@ -98,7 +98,7 @@ class IdleMessage(QtWidgets.QFrame):
 
         lay = QtWidgets.QVBoxLayout()
         lay.addWidget(lbl)
-        lay.addWidget(lbl2)
+        # lay.addWidget(lbl2)
         lay.addWidget(btn)
         self.setLayout(lay)
 
@@ -341,7 +341,7 @@ class PostprocessMessage(Widgets.TransparentOverlay):
             return button
 
         buttons = [createButton(task) for task in tasks]
-        buttons.append(QtWidgets.QPushButton(_('Start over')))
+        buttons.append(QtWidgets.QPushButton(_('again again')))
         buttons[-1].clicked.connect(idle_handle)
 
         button_lay = QtWidgets.QGridLayout()
@@ -350,7 +350,7 @@ class PostprocessMessage(Widgets.TransparentOverlay):
             button_lay.addWidget(button, *pos)
 
         layout = QtWidgets.QVBoxLayout()
-        layout.addWidget(QtWidgets.QLabel(_('Happy?')))
+        layout.addWidget(QtWidgets.QLabel(_('stunning!')))
         layout.addLayout(button_lay)
         self.setLayout(layout)
 
