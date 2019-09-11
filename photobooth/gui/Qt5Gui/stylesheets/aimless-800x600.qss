@@ -21,6 +21,8 @@ QPushButton {
     border-radius: 8px;
     border-color: #eeeeee;
     padding: 8px;
+    font-family: Garogier, sans-serif;
+    font-variant: small-caps;
 }
 
 QPushButton:pressed {
