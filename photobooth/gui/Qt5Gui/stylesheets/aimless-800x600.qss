@@ -3,7 +3,7 @@
 QWidget {
     background-color: transparent;
     color: #eeeeee;
-    font-family: GeorgiaScript, sans-serif;
+    font-family: Georgia Script, sans-serif;
     font-size: 30px;
 }
 
@@ -32,12 +32,13 @@ QPushButton:pressed {
 /* Idle Screen */
 
 QFrame#IdleMessage {
-    padding: 80px 40px 60px 40px;
+    padding: 20px 40px 60px 40px;
 }
 
 QFrame#IdleMessage QLabel {
-    font-size: 80px;
+    font-size: 160px;
     qproperty-alignment: AlignCenter;
+    margin-bottom: 5px;
 }
 
 QFrame#IdleMessage QPushButton {

@@ -85,6 +85,8 @@ class PyQt5Gui(GuiSkeleton):
         self._fonts = QtGui.QFontDatabase()
         for font in fonts:
             self._fonts.addApplicationFont(font)
+        pprint.pprint(self._fonts.families(self._fonts.writingSystems()[1]))
+
 
     def _initReceiver(self):
 
