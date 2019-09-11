@@ -80,7 +80,7 @@ class PyQt5Gui(GuiSkeleton):
         fonts = ['photobooth/gui/Qt5Gui/fonts/AmaticSC-Regular.ttf',
                  'photobooth/gui/Qt5Gui/fonts/AmaticSC-Bold.ttf',
                  'photobooth/gui/Qt5Gui/fonts/GeorgiaScript.ttf',
-                 'photobooth/gui/Qt5Gui/fonts/Garogier.tff'
+                 'photobooth/gui/Qt5Gui/fonts/Garogier.ttf'
                  ]
         self._fonts = QtGui.QFontDatabase()
         for font in fonts:
