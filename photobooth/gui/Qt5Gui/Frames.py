@@ -84,19 +84,21 @@ class IdleMessage(QtWidgets.QFrame):
         super().__init__()
         self.setObjectName('IdleMessage')
 
-        self._message_label = _('Hit the')
-        self._message_button = _('Button!')
+        self._message_label = _('touch the button')
+        self._message_button = _('LET\'S TAKE PICTURES')
 
         self.initFrame(trigger_action)
 
     def initFrame(self, trigger_action):
 
         lbl = QtWidgets.QLabel(self._message_label)
+        lbl2 = QtWidgets.QLabel('to begin!')
         btn = QtWidgets.QPushButton(self._message_button)
         btn.clicked.connect(trigger_action)
 
         lay = QtWidgets.QVBoxLayout()
         lay.addWidget(lbl)
+        lay.addWidget(lbl2)
         lay.addWidget(btn)
         self.setLayout(lay)
 

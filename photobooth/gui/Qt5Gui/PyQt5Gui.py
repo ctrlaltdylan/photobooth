@@ -19,6 +19,7 @@
 
 import logging
 import os
+import pprint
 
 from PyQt5 import QtCore
 from PyQt5 import QtGui
@@ -65,6 +66,7 @@ class PyQt5Gui(GuiSkeleton):
 
         # Load stylesheet
         style = self._cfg.get('Gui', 'style')
+        pprint.pprint(styles)
         filename = next((file for name, file in styles if name == style))
         with open(os.path.join(os.path.dirname(__file__), filename), 'r') as f:
             stylesheet = f.read()
@@ -76,7 +78,8 @@ class PyQt5Gui(GuiSkeleton):
 
         # Load additional fonts
         fonts = ['photobooth/gui/Qt5Gui/fonts/AmaticSC-Regular.ttf',
-                 'photobooth/gui/Qt5Gui/fonts/AmaticSC-Bold.ttf']
+                 'photobooth/gui/Qt5Gui/fonts/AmaticSC-Bold.ttf',
+                 'photobooth/gui/Qt5Gui/fonts/GeorgiaScript.ttf']
         self._fonts = QtGui.QFontDatabase()
         for font in fonts:
             self._fonts.addApplicationFont(font)
